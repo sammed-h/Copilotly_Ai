@@ -1,0 +1,83 @@
+.sideBarMain {
+  height: 100vh;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: 23%;
+  position: relative;
+  z-index: 10;
+}
+
+.sidebar {
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  margin-left: 15px;
+}
+
+.sidebar li {
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0.01em;
+  color: #334d6e;
+  background-color: #fff;
+}
+
+.sidebar li.active {
+  border-right: 5px solid #109cf1;
+  color: #109cf1;
+}
+
+.optionIcon {
+  height: 16px;
+  width: 16px;
+  margin-right: 20px;
+}
+
+.Label {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #334d6e;
+}
+
+.userProfile {
+  display: flex;
+  border-top: 1px solid #ebeff2;
+  padding-top: 19px;
+  margin-bottom: 30px;
+  margin-top: 39px;
+}
+
+.userImg {
+  object-fit: cover;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+
+.name {
+  color: #192a3e;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+.email {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #90a0b7;
+  letter-spacing: 0.02em;
+}

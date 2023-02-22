@@ -1,0 +1,88 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 56px;
+  width: 100%;
+  background-color: #ffff;
+  text-align: center;
+  border-bottom: 1px solid #ebeff2;
+}
+
+.leftSideFlex {
+  margin-top: 18px;
+  display: flex;
+  text-align: center;
+}
+
+.leftsideIcon {
+  height: 18px;
+  width: 18px;
+  margin-right: 15px;
+}
+.leftSideFlex span {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.rightSideFlex {
+  margin-top: 18px;
+  display: flex;
+  text-align: center;
+}
+.rightSideFlex img {
+  cursor: pointer;
+}
+
+.rightsideIcon {
+  margin-left: 35px;
+  height: 20px;
+  width: 20px;
+  margin-right: 15px;
+}
+
+.modeIcon {
+  height: 60px;
+  width: 60px;
+  margin-top: -20px;
+  margin-left: 20px;
+}
+
+.exitIcon {
+  margin-left: 35px;
+  height: 20px;
+  width: 20px;
+  margin-right: 25px;
+}
+
+.leftsideIconTelephone {
+  height: 18px;
+  width: 18px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+.emailIcon {
+  display: flex;
+  justify-content: center;
+  margin: 0 20px;
+}
+.emailIcon img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+.phoneIcon {
+  display: flex;
+  justify-content: center;
+  margin-left: 15px;
+}
+.phoneIcon img {
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+}
