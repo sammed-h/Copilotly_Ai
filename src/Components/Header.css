@@ -19,7 +19,7 @@
   width: 18px;
   margin-right: 15px;
 }
-.leftSideFlex span {
+.leftSideFlex {
   margin-right: 20px;
   cursor: pointer;
 }
@@ -85,4 +85,126 @@
   margin-right: 15px;
   width: 20px;
   height: 20px;
+}
+
+/* responsive code */
+@media only screen and (max-width: 2500px) and (min-width: 1400px) {
+  .rightSideFlex {
+    margin-top: 18px;
+    display: flex;
+    text-align: center;
+    margin-left: -25px;
+  }
+  .rightsideIcon {
+    margin-left: 55px;
+    margin-right: 35px;
+  }
+  .modeIcon {
+    margin-top: -20px;
+    margin-left: 20px;
+  }
+  .exitIcon {
+    margin-left: 35px;
+    margin-right: 25px;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .rightSideFlex {
+    margin-top: 18px;
+    display: flex;
+    text-align: center;
+    margin-left: -25px;
+  }
+}
+@media only screen and (max-width: 1215px) {
+  .leftSideFlex {
+    margin-right: 0;
+    margin-left: 0;
+    display: block;
+    gap: 0px;
+  }
+  .phoneIcon {
+    margin-left: -20px;
+    margin-top: -8px;
+    margin-bottom: 3px;
+  }
+  .phoneIcon span {
+    font-size: 14px;
+  }
+  .emailIcon span {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 879px) {
+  .rightSideFlex {
+    margin-top: 18px;
+    display: flex;
+    text-align: center;
+  }
+  .rightSideFlex img {
+    cursor: pointer;
+  }
+
+  .rightsideIcon {
+    margin-left: 15px;
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+  }
+
+  .modeIcon {
+    height: 60px;
+    width: 60px;
+    margin-top: -20px;
+    margin-left: 20px;
+  }
+
+  .exitIcon {
+    margin-left: 35px;
+    height: 20px;
+    width: 20px;
+    margin-right: 25px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .leftSideFlex {
+    display: none;
+  }
+  .rightsideIcon {
+    margin-right: 10px;
+  }
+  .modeIcon {
+    margin-left: 10px;
+  }
+  .exitIcon {
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .rightsideIcon {
+    margin-left: 15px;
+    margin-right: 10px;
+  }
+  .modeIcon {
+    margin-left: 6px;
+  }
+  .exitIcon {
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .rightsideIcon {
+    margin-left: 6px;
+    margin-right: 8px;
+  }
+  .modeIcon {
+    margin-left: 5px;
+  }
+  .exitIcon {
+    margin-left: 12px;
+  }
 }

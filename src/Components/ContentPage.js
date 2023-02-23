@@ -1,11 +1,30 @@
 import { Button } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import Cards from "./Cards";
-import { Pagination } from "antd";
-
+import { data } from "./MockData";
 import "./ContentPage.css";
 import { PUBLIC_ASSETS_PATH } from "./Constants";
 function ContentPage() {
+  const [sortedItems, setSortedItems] = useState(data);
+  const [selectedValue, setSelectedValue] = useState("");
+
+  function handleSelection(event) {
+    setSelectedValue(event.target.value);
+    if (event.target.value === "option1") {
+      const sorted = [...sortedItems].sort((a, b) =>
+        a.jobRole.localeCompare(b.jobRole)
+      );
+      setSortedItems(sorted);
+    } else if (event.target.value === "option2") {
+      const sorted = [...sortedItems].sort((a, b) =>
+        b.jobRole.localeCompare(a.jobRole)
+      );
+      setSortedItems(sorted);
+    } else {
+      setSortedItems(data);
+    }
+  }
+
   return (
     <div className="container">
       <div className="topSection">
@@ -14,23 +33,23 @@ function ContentPage() {
           <div className="leftDivTxt"> My Interview </div>
         </div>
         <div>
-          <Button
-            size="large"
-            style={{
-              textTransform: "uppercase",
-              backgroundColor: "#75C059",
-              color: "#ffff",
-            }}
-          >
-            Create New Job
-          </Button>
+          <button className="createJobBtn">Create New Job</button>
         </div>
       </div>
       <div className="searchBar">
         <div className="topLeft">
           <span> Sort By:</span>
-          <select className="dropdown">
-            <option>Abc</option>
+          <select
+            className="dropdown"
+            value={selectedValue}
+            onChange={handleSelection}
+          >
+            <option hidden value="">
+              Abc
+            </option>
+            <option value="option1">A to Z</option>
+            <option value="option2">Z to A</option>
+            <option value="option3"> no sort </option>
           </select>
           <span>
             Most Recent
@@ -49,15 +68,12 @@ function ContentPage() {
             <input
               type="text"
               className="search-input"
-              placeholder="Search by Job Title"
+              placeholder="Search "
             />
           </div>
         </div>
       </div>
-      <Cards />
-      <div className="pagination">
-        <Pagination defaultCurrent={1} total={50} />
-      </div>
+      <Cards data={sortedItems} />
     </div>
   );
 }

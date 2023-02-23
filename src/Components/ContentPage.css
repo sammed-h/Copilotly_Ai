@@ -1,8 +1,8 @@
 .container {
-  width: 860px;
+  width: 90%;
   margin: 0 auto;
-  padding: 20px;
   background-color: #f5f6f8;
+  padding: 0px 20px 0px 20px;
 }
 .topSection {
   display: flex;
@@ -22,13 +22,6 @@
   text-align: center;
   border-radius: 4px;
   cursor: pointer;
-}
-
-.pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
 }
 
 .searchBar {
@@ -59,7 +52,6 @@
 
 .search-container {
   display: flex;
-  align-items: center;
   background-color: #e7effa;
   border-radius: 20px;
   padding: 5px;
@@ -78,6 +70,7 @@
   font-size: 14px;
   flex: 1;
   outline: none;
+  width: 20px;
 }
 
 .arrowDownTop {
@@ -89,4 +82,46 @@
   border: none;
   background-color: transparent;
   color: #2ea8f3;
+}
+.createJobBtn {
+  border: none;
+  outline: none;
+  background-color: #75c059;
+  color: white;
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) and (min-width: 300px) {
+  .createJobBtn {
+    font-size: 11px;
+  }
+  .topLeft {
+    display: flex;
+    gap: 3px;
+  }
+  .leftDivTxt {
+    padding: 6px 10px;
+    width: 80px;
+    text-align: center;
+    font-size: 14px;
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: #e7effa;
+    border-radius: 20px;
+    padding: 5px;
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 415px) and (min-width: 300px) {
+  .leftDivTxt {
+    padding: 6px 10px;
+    background-color: #e7effa;
+    width: 70px;
+    font-size: 12px;
+  }
 }

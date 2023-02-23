@@ -1,19 +1,22 @@
-.sideBarMain {
-  height: 100vh;
-  background-color: #fff;
+.dekstopView .sideBarMain {
+  height: 100%;
   border: 1px solid #ddd;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   width: 23%;
   position: relative;
   z-index: 10;
+  padding: 0;
+  margin: 0;
 }
 
 .sidebar {
+  height: 100vh;
   padding: 0;
   list-style: none;
-  position: absolute;
   margin-left: 15px;
+  border-radius: 4px;
+  margin-right: 20px;
 }
 
 .sidebar li {
@@ -29,6 +32,7 @@
   letter-spacing: 0.01em;
   color: #334d6e;
   background-color: #fff;
+  width: 96%;
 }
 
 .sidebar li.active {
@@ -42,6 +46,17 @@
   margin-right: 20px;
 }
 
+.drawerIcon {
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+  position: absolute;
+  margin-left: 30px;
+}
+.drawer {
+  padding: 0;
+  margin: 0;
+}
 .Label {
   font-weight: 600;
   font-size: 18px;
@@ -50,12 +65,12 @@
   color: #334d6e;
 }
 
-.userProfile {
+.dekstopView .userProfile {
   display: flex;
   border-top: 1px solid #ebeff2;
   padding-top: 19px;
   margin-bottom: 30px;
-  margin-top: 39px;
+  margin-top: 52px;
 }
 
 .userImg {
@@ -80,4 +95,24 @@
   line-height: 22px;
   color: #90a0b7;
   letter-spacing: 0.02em;
+}
+.mobileView {
+  display: none;
+}
+.userProfile {
+  display: flex;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 30px;
+}
+.dekstopView .name {
+  display: block;
+}
+@media only screen and (max-width: 600px) {
+  .dekstopView {
+    display: none;
+  }
+  .mobileView {
+    display: block;
+  }
 }

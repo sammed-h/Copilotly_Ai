@@ -8,11 +8,11 @@ function Header() {
         <div className="leftSideFlex">
           <div className="phoneIcon">
             <img src={PUBLIC_ASSETS_PATH + "/telephone.png"} alt="" />
-            1(877)789-8767
+            <span>1(877)789-8767</span>
           </div>
           <div className="emailIcon">
             <img src={PUBLIC_ASSETS_PATH + "/email.png"} alt="" />
-            help@copilotly.com
+            <span>help@copilotly.com</span>
           </div>
         </div>
       </div>

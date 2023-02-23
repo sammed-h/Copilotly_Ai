@@ -1,14 +1,23 @@
-import { Button, Checkbox, Tooltip } from "antd";
+import { Button, Checkbox, Tooltip, Pagination } from "antd";
 import React, { useState } from "react";
 import "./Cards.css";
 import { PUBLIC_ASSETS_PATH } from "./Constants";
-import { data } from "./MockData";
-const Cards = () => {
+const Cards = ({ data }) => {
   const [show, setShow] = useState(false);
   const [id, setId] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const tableData = data.slice(startIndex, endIndex);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
     <div className="cardMain">
-      {data?.map((item) => {
+      {tableData?.map((item) => {
         return (
           <div
             bordered={false}
@@ -51,17 +60,7 @@ const Cards = () => {
                     }`}
                   />
                 </div>
-                <Button
-                  type="primary"
-                  size="large"
-                  style={{
-                    textTransform: "uppercase",
-                    backgroundColor: "#109CF1",
-                    color: "#ffff",
-                    width: "150px",
-                    fontSize: "14px",
-                  }}
-                >
+                <Button type="primary" className="hireButton">
                   start hiring
                 </Button>
               </div>
@@ -97,16 +96,7 @@ const Cards = () => {
                 </div>
 
                 <div className="jobActions">
-                  <Button
-                    size="large"
-                    style={{
-                      backgroundColor: "#75C059",
-                      color: "#ffff",
-                      padding: "2px 20px",
-                    }}
-                  >
-                    View Applicants
-                  </Button>
+                  <button className="viewAppBtn">View Applicants</button>
                   <div className="jobRight">
                     <img
                       src={PUBLIC_ASSETS_PATH + "/pencil.png"}
@@ -170,6 +160,14 @@ const Cards = () => {
           </div>
         );
       })}
+      <div className="pagination">
+        <Pagination
+          current={currentPage}
+          total={data.length}
+          pageSize={itemsPerPage}
+          onChange={handlePageChange}
+        />
+      </div>
     </div>
   );
 };

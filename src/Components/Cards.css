@@ -1,7 +1,9 @@
+.cardMain {
+  width: 100%;
+}
 .cardContent {
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 .card {
   background-color: #ffff;
@@ -53,7 +55,7 @@
   flex-direction: column;
   align-items: start;
 }
-.jobActions button {
+/* .hireButton {
   border: none;
   outline: none;
   background-color: #75c059;
@@ -61,18 +63,26 @@
   font-size: 16px;
   padding: 8px 14px;
   border-radius: 4px;
-}
-.jobInfo {
-  margin: 0 96px;
-}
-.info {
-  display: flex;
+  cursor: pointer;
+} */
+.viewAppBtn {
+  border: none;
+  outline: none;
+  background-color: #75c059;
+  color: white;
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .info {
+  display: flex;
   margin-top: 10px;
   padding-top: 10px;
   border-top: 3px solid #e5e9ec;
+  justify-content: center;
+  align-items: center;
 }
 
 .jobInfo {
@@ -122,4 +132,84 @@
 .notAllowIcon {
   height: 20px;
   width: 20px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.hireButton {
+  text-transform: uppercase;
+  background-color: #109cf1;
+  color: #ffff;
+  width: 140px;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 700px) and (min-width: 400px) {
+  .reportIcon {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-top: 8px;
+  }
+  .notAllowIcon {
+    height: 15px;
+    width: 15px;
+  }
+  .jobTitle {
+    font-size: 14px;
+  }
+  .date {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .arrow {
+    margin-right: 15px;
+  }
+  .hireButton {
+    width: 100px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 500px) and (min-width: 300px) {
+  .reportIcon {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    margin-left: 3px;
+    margin-right: 8px;
+    margin-top: 10px;
+  }
+  .notAllowIcon {
+    height: 12px;
+    width: 12px;
+  }
+  .jobTitle {
+    font-size: 14px;
+  }
+  .date {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .arrow {
+    margin-right: 12px;
+  }
+  .hireButton {
+    width: 90px;
+    font-size: 12px;
+    padding: 6px 40px 6px 7px;
+    text-align: center;
+  }
+  .viewAppBtn {
+    font-size: 14px;
+  }
+  .jobRight span {
+    font-size: 14px;
+  }
 }
